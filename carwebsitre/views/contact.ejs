@@ -1,0 +1,42 @@
+
+<%- include('header') -%>
+
+<!-- 
+<div class="text-center center-div" id="login">
+    <div class="container w-25 border py-5">
+        <div class="title pb-5">
+            <h2 class="font-weight-bold">Contact Us</h2>
+            <span>Fill your Data</span>
+            <% if(locals.logout){ %>
+                <div class="alter alert-success text-center">
+                    <%= logout %>
+                </div>
+            <% } %>
+        </div> -->
+
+
+
+        <form action="/route/contactapi" method="POST" class="pt-3">
+            <div class="form-group">
+                <input type="name" class="form-control" placeholder="name" name="name">
+            </div>
+            <div class="form-group">
+                <input type="query" class="form-control" placeholder="query" name="query">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="email" name="email">
+                <small class="form-text text-muted text-left">Register email address</small>
+            </div>
+            <div class="form-group">
+                <input type="subject" class="form-control" name="subject" placeholder="subject">
+            </div>
+
+          
+            
+            <button type="submit" class="btn btn-success rounded-pill">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+<%- include('footer') -%>
